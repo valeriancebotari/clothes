@@ -13,8 +13,10 @@
     --red-color: #ff4757;
     --flashwhite-color: #f1f2f6;
     --white-color: #ffffff;
+    --ldark-color: #373737;
     --dark-color: #212121;
-
+    --vdark-color: #161616;
+    
     --primary-font: 'Montserrat', sans-serif;
     --second-font: 'Prata', serif;
     --fs14: 14px;
@@ -1047,7 +1049,11 @@ main > div .heading {
 
 .inner-footer .search .input {
     font-size: var(--fs14);
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--ldark-color);         
+}
+
+.inner-footer .search .input:focus {
+    border: 2px solid var(--vdark-color); 
 }
 
 .inner-footer .bottom {
@@ -1055,6 +1061,55 @@ main > div .heading {
     padding-bottom: 40px;
 }
 
+/* **************************** */
+/* ******** PAGE SINGLE ******* */
+/* **************************** */
+
+/* *********** Breadcrumb ********** */
+.breadcrumb {
+    width: 100%;
+    line-height: initial;
+    padding: 30px 0 50px 0;
+}
+
+.breadcrumb ul {
+    justify-content: center;
+}
+
+.breadcrumb ul li {
+    position: relative;
+    margin-right: 10px;
+    color: var(--vdark-color);
+}
+
+.breadcrumb ul li:not(:first-child) {
+    padding-left: 25px;
+}
+
+.breadcrumb ul li:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBwb2ludHM9IjE2MCwxMTUuNCAxODAuNyw5NiAzNTIsMjU2IDE4MC43LDQxNiAxNjAsMzk2LjcgMzEwLjUsMjU2ICIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb ul :where(li, li a) {
+    font-size: var(--fs14);
+    padding: 0;
+}
+
+.breadcrumb ul li:last-child {
+    color: var(--grey-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/********************************************************/
 
 /* ********* MEDIA QUERIES ******* */
 @media (min-width: 768px) {

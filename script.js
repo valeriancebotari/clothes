@@ -122,4 +122,4 @@ const carousel = new Swiper('.carouselbox', {
     }
 });
 
-/** urmeaza cod */
+/** urmeaza cod js */
