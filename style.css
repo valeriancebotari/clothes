@@ -1109,9 +1109,60 @@ main > div .heading {
     text-overflow: ellipsis;
 }
 
+/* ***************** Product image ****************** */
+.product .wrapper {
+    --grid-col: 331px;
+}
+
+.product .main-image img {
+    width: 100%;
+}
+
+.product .outer-thumb {
+    display: none;
+}
+
+.product .outer-thumb .item {
+    height: fit-content;
+    cursor: pointer;
+}
+
+.product .thumb-wrap {
+    position: relative;
+    width: 70px;
+    height: 90px;
+}
+
+
 /********************************************************/
 
 /* ********* MEDIA QUERIES ******* */
+@media (min-width: 481px) {
+    .product .wrapper {
+        --gutter: 60px;
+    }
+
+    .product.dotgrid .image {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product .outer-main {
+        width: calc(100% - 85px);
+        height: 100%;
+        margin: 0 0 0 85px;
+    }
+
+    .product .outer-thumb {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
 @media (min-width: 768px) {
     .banner {
         background-size: contain;
